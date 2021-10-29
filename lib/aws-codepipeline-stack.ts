@@ -15,7 +15,7 @@ export class AwsCodepipelineStack extends cdk.Stack {
         });
 
         pipeline.addStage(new PipelineAppStage(this, "dummy-stage", {
-            env: {account: "012290904591", region: "eu-west-1"}
+            env: props?.env
         }));
     }
 }

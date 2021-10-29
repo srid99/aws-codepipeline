@@ -7,8 +7,8 @@ const app = new cdk.App();
 
 new AwsCodepipelineStack(app, 'AwsCodepipelineStack', {
     env: {
-        account: '012290904591',
-        region: 'eu-west-1',
+        account: process.env.AWS_ACCOUNT,
+        region: process.env.AWS_REGION,
     }
 });
 
